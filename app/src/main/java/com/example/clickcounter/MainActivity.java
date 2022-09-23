@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 click++;
                 if (click > 0){
-                    tw.setText(click);
+                    tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(0, 255, 0));
                 }
                 else if(click < 0){
-                    tw.setText(click);
+                    tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 0, 0));
                 }
                 else{
-                    tw.setText(click);
+                    tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 255, 255));
                 }
             }
@@ -50,17 +50,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 click--;
                 if (click > 0){
-                    tw.setText(click);
+                    tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(0, 255, 0));
                 }
                 else if(click < 0){
-                    tw.setText(click);
+                    tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 0, 0));
                 }
                 else{
-                    tw.setText(click);
-                    tw.setTextColor(Color.rgb(255, 255, 255));
+                    tw.setText(String.valueOf(click));
+                    tw.setTextColor(Color.rgb(0, 0, 255));
                 }
+            }
+        });
+
+        tw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                click = 0;
+                tw.setText(String.valueOf(click));
+                tw.setTextColor(Color.rgb(0, 0, 255));
             }
         });
 
