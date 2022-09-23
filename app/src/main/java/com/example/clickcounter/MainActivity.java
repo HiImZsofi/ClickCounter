@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                     tw.setTextColor(Color.rgb(255, 255, 255));
                     if(isPrime(click)){
                         tw.setText(String.valueOf(click));
-                        tw.setTextColor(Color.rgb(255, 255, 255));
+                        tw.setTextColor(Color.WHITE);
                     }
                 }
             }
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     tw.setTextColor(Color.rgb(0, 255, 0));
                     if(isPrime(click)){
                         tw.setText(String.valueOf(click));
-                        tw.setTextColor(Color.rgb(255, 255, 255));
+                        tw.setTextColor(getResources().getColor(R.color.white));
                     }
                 }
                 else if(click < 0){
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     tw.setTextColor(Color.rgb(255, 0, 0));
                     if(isPrime(click)){
                         tw.setText(String.valueOf(click));
-                        tw.setTextColor(Color.rgb(255, 255, 255));
+                        tw.setTextColor(Color.parseColor("#FFFFFF"));
                     }
                 }
                 else{
