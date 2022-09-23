@@ -17,12 +17,23 @@ public class MainActivity extends AppCompatActivity {
     private Button minusbutton;
     public int click;
 
+    static boolean isPrime(int n)
+    {
+        if (n <= 1)
+            return false;
 
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         init();
 
@@ -33,14 +44,26 @@ public class MainActivity extends AppCompatActivity {
                 if (click > 0){
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(0, 255, 0));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
                 else if(click < 0){
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 0, 0));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
                 else{
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 255, 255));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
             }
         });
@@ -52,14 +75,26 @@ public class MainActivity extends AppCompatActivity {
                 if (click > 0){
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(0, 255, 0));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
                 else if(click < 0){
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(255, 0, 0));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
                 else{
                     tw.setText(String.valueOf(click));
                     tw.setTextColor(Color.rgb(0, 0, 255));
+                    if(isPrime(click)){
+                        tw.setText(String.valueOf(click));
+                        tw.setTextColor(Color.rgb(255, 255, 255));
+                    }
                 }
             }
         });
